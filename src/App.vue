@@ -1,15 +1,14 @@
 <template>
-  <CreditCard name="Banco Original" img="card-green"/>
-  <CreditCard name="Banco BMG" img="card-gray"/>
+  <List />
 </template>
 
 <script>
-import CreditCard from './components/CreditCard.vue'
+import List from './pages/list.vue'
 
 export default {
   name: 'App',
   components: {
-    CreditCard
+    List
   }
 }
 </script>
