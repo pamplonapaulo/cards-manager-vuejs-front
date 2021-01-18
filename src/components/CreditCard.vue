@@ -1,16 +1,19 @@
 <template>
-  <li>
-    
-    <img v-bind:src="'https://i.pinimg.com/originals/63/56/b8/6356b80da9ea033093d1f1696066ba55.png'" />
-    <!-- <img v-bind:src="'./src/assets/' + img + '.png'" /> -->
-    <h1>{{ name }}</h1>
-  </li>
+  <router-link to='/detail'>
+    <li>
+      <img v-bind:src="img" />
+      <!-- <img v-bind:src="'https://i.pinimg.com/originals/63/56/b8/6356b80da9ea033093d1f1696066ba55.png'" /> -->
+      <!-- <img v-bind:src="'./src/assets/' + img + '.png'" /> -->
+      <h1>{{ name }}</h1>
+    </li>
+  </router-link>
 </template>
 
 <script>
 export default {
   name: 'CreditCard',
   props: {
+    key: String,
     name: String,
     img: String
   }
@@ -18,7 +21,6 @@ export default {
 </script>
 
 <style scoped>
-
 li {
   align-items: center;
   background: rgba(60,225,104, 0.2);
@@ -53,5 +55,4 @@ h1 {
 img {
   max-width: 250px;
 }
-
 </style>
