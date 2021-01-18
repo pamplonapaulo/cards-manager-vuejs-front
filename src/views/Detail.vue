@@ -239,7 +239,7 @@ button {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  height: 48px;
+  min-height: 48px;
   line-height: 20px;
   letter-spacing: 0em;
   margin: 1.7rem auto;
@@ -299,11 +299,6 @@ img.card {
   line-height: 28px;
   letter-spacing: 0em;
   text-align: center;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
 }
 
 .main h1 {
@@ -523,7 +518,7 @@ img.card {
 }
 
 .alternative h1 {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 21px;
   font-style: normal;
   font-weight: 800;
@@ -600,9 +595,74 @@ img.card {
 
 @media only screen and (min-width: 730px) {
 
-  .main > img {
+  /* .main > img {
     width: 400px;
     margin: 0;
+  } */
+
+  section .green-dots {
+    flex-direction: column;
+  }
+
+  .main .green-dots {
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  .main .green-dots li {
+    flex-direction: column;
+    margin: 0 2rem;
+    max-width: 150px;
+    text-align: center;
+  }
+
+  .publisher {
+    max-width: 400px;
+  }
+
+  .details {
+    padding: 15px 30px;
+  }
+
+  .details h1 {
+    padding: 10px;
+  }
+
+  .details ul {
+    height: 300px;
+    justify-content: end;
+    padding: 0px 10px;
+  }
+
+  .details li {
+    width: 310px;
+  }
+
+  .details li:nth-child(even) {
+    margin-left: 15px;
+  }
+
+  .issuingBank {
+    max-width: 700px;
+  }
+
+  .featured {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .featured .block {
+    max-width: 40%;
+  }
+
+  .prosAndCons {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 5rem;
+  }
+
+  .prosAndCons div {
+    max-width: 400px
   }
 
   ul {
@@ -612,6 +672,8 @@ img.card {
   h1 {
     text-align: left;
   }
+
+  
 }
 
 </style>
