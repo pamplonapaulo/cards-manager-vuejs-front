@@ -1,9 +1,19 @@
 <template>
-  <router-link to='/detail'>
+  <!-- <router-link :to='/product/ + slug'> -->
+  <router-link :to="{
+    name: 'Product',
+    params: {
+      id: key,
+      name: name,
+      slug: slug,
+      img: img,
+      brand: brand,
+      category: category,
+      limit: limit,
+      fee: fee
+    }}">
     <li>
       <img v-bind:src="img" />
-      <!-- <img v-bind:src="'https://i.pinimg.com/originals/63/56/b8/6356b80da9ea033093d1f1696066ba55.png'" /> -->
-      <!-- <img v-bind:src="'./src/assets/' + img + '.png'" /> -->
       <h1>{{ name }}</h1>
     </li>
   </router-link>
@@ -15,7 +25,12 @@ export default {
   props: {
     key: String,
     name: String,
-    img: String
+    slug: String,
+    img: String,
+    brand: String,
+    category: String,
+    limit: String,
+    fee: String,
   }
 }
 </script>
