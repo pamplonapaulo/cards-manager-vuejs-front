@@ -55,12 +55,12 @@ table {
 
 @media only screen and (min-width: 640px) {
   #app{
-    height: 100%;
+    min-height: 100%;
   }
 }
 
 body, html {
-  height: 100%;
+  min-height: 100%;
 }
 
 body::-webkit-scrollbar,

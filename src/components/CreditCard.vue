@@ -30,7 +30,7 @@ export default {
     brand: String,
     category: String,
     limit: String,
-    fee: String,
+    fee: String
   }
 }
 </script>
