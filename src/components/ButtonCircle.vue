@@ -34,6 +34,6 @@ button {
 
 button:hover {
   background: #728C69;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 </style>

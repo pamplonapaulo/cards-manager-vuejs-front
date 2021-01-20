@@ -1,6 +1,6 @@
 <template>
   <!-- <router-link :to='/product/ + slug'> -->
-  <router-link :to="{
+  <router-link class="anchor" :to="{
     name: 'Product',
     params: {
       id: key,
@@ -36,6 +36,11 @@ export default {
 </script>
 
 <style scoped>
+
+.anchor {
+  margin-bottom: 1rem;
+}
+
 li {
   align-items: center;
   background: rgba(60,225,104, 0.2);
@@ -46,7 +51,6 @@ li {
   height: 300px;
   justify-content: space-evenly;
   list-style: none;
-  margin: 10px;
   width: 300px;
   transition: 0.1s all ease;
 }
