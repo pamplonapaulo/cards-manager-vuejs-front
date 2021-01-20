@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <section class="main">
-      <h1>Original Mastercard Internacional</h1>
-      <img class="card" v-bind:src="'./src/assets/' + 'card-green' + '.png'" />
+      <h1>{{ $route.params.name }}</h1>
+      <img class="card" v-bind:src=$route.params.img />
       <button>Solicitar agora!</button>
       <ul class="green-dots">
         <li>Anuidade grátis para sempre</li>
@@ -14,7 +14,7 @@
       <h3>Opinião da editora</h3>
       <p>O Cartão Original Internacional atende bem a simples função de um cartão de crédito. Para você que deseja economizar, obtê-lo pode ser interessante: as duas principais vantagens que o Cartão Original oferece é a isenção da anuidade e ainda possui a função cashback, em que parte de seus gastos no crédito retornam em dinheiro. Mas, se você procura um cartão que disponibiliza benefícios de milhas e pontuações para viagens, essa não é a melhor opção.</p>
       <div class="author">
-      <img v-bind:src="'./src/assets/' + 'avatar' + '.png'" />
+      <img v-bind:src="'/src/assets/' + 'avatar' + '.png'" />
         <div class="wrapper">
           <h5 class="name">Luana Pedra</h5>
           <h6 class="role">Editora Plusdin</h6>
@@ -28,52 +28,52 @@
 
         <li>
           <div class="icon-wrapper">
-            <img v-bind:src="'./src/assets/icons/' + 'dolar-sign' + '.png'" />
+            <img v-bind:src="'/src/assets/icons/' + 'dolar-sign' + '.png'" />
           </div>
           <div class="text-wrapper">
             <p>Renda mínima necessária</p>
-            <p>R$0,00</p>
+            <p>A consultar</p>
           </div>
         </li>
         <li>
           <div class="icon-wrapper">
-            <img v-bind:src="'./src/assets/icons/' + 'card' + '.png'" />
+            <img v-bind:src="'/src/assets/icons/' + 'card' + '.png'" />
           </div>
           <div class="text-wrapper">
             <p>Primeira anuidade</p>
-            <p>Grátis</p>
+            <p>R$ {{ $route.params.fee }}</p>
           </div>
         </li>
         <li>
           <div class="icon-wrapper">
-            <img v-bind:src="'./src/assets/icons/' + 'card' + '.png'" />
+            <img v-bind:src="'/src/assets/icons/' + 'card' + '.png'" />
           </div>
           <div class="text-wrapper">
             <p>Demais anuidades</p>
-            <p>Grátis</p>
+            <p>A consultar</p>
           </div>
         </li>
         <li>
           <div class="icon-wrapper">
-            <img v-bind:src="'./src/assets/icons/' + 'globe' + '.png'" />
+            <img v-bind:src="'/src/assets/icons/' + 'globe' + '.png'" />
           </div>
           <div class="text-wrapper">
-            <p>Tipo de cartão</p>
-            <p>Internacional</p>
+            <p>Categoria</p>
+            <p>{{ $route.params.category }}</p>
           </div>
         </li>
         <li>
           <div class="icon-wrapper">
-            <img v-bind:src="'./src/assets/icons/' + 'mastercard' + '.png'" />
+            <img v-bind:src="'/src/assets/icons/' + 'mastercard' + '.png'" />
           </div>
           <div class="text-wrapper">
             <p>Bandeira</p>
-            <p>Mastercard</p>
+            <p>{{ $route.params.brand }}</p>
           </div>
         </li>
         <li>
           <div class="icon-wrapper">
-            <img v-bind:src="'./src/assets/icons/' + 'percentege' + '.png'" />
+            <img v-bind:src="'/src/assets/icons/' + 'percentege' + '.png'" />
           </div>
           <div class="text-wrapper">
             <p>Juros rotativos</p>
@@ -82,11 +82,11 @@
         </li>
         <li>
           <div class="icon-wrapper">
-            <img v-bind:src="'./src/assets/icons/' + 'card' + '.png'" />
+            <img v-bind:src="'/src/assets/icons/' + 'card' + '.png'" />
           </div>
           <div class="text-wrapper">
             <p>Limite de crédito</p>
-            <p>R$50.000,00</p>
+            <p>R$ {{ $route.params.limit }}</p>
           </div>
         </li>
       </ul>
@@ -122,7 +122,7 @@
       <div>
         <div class="title">
           <h1>Vantagens</h1>
-          <img v-bind:src="'./src/assets/icons/' + 'plus' + '.png'" />
+          <img v-bind:src="'/src/assets/icons/' + 'plus' + '.png'" />
         </div>
         <ul class="green-dots">
           <li>The Capital One Venture is one of the best travel credit cards available.</li>
@@ -133,7 +133,7 @@
       <div>
         <div class="title">
           <h1>Desvantagens</h1>
-          <img v-bind:src="'./src/assets/icons/' + 'minus' + '.png'" />
+          <img v-bind:src="'/src/assets/icons/' + 'minus' + '.png'" />
         </div>
         <ul class="green-dots">
           <li>The Capital One Venture is one of the best travel credit cards available.</li>
@@ -144,8 +144,8 @@
     </section>
     <section class="alternative">
       <h4>Uma alternativa para você</h4>
-      <img class="card" v-bind:src="'./src/assets/' + 'card-gray' + '.png'" />
-      <h1>BMG Card Consignado Mastercard Internacional</h1>
+      <img class="card" v-bind:src=$route.params.img />
+      <h1>{{ $route.params.name }}</h1>
       <p>Vantagens similares, sem anuidade.</p>
       <button>Solicitar agora!</button>
     </section>
@@ -170,7 +170,7 @@
 <script>
 
 export default {
-  name: 'Detail'
+  name: 'Product'
 }
 </script>
 
