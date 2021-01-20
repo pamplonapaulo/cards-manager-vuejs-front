@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="container">
     <section class="main">
       <h1>{{ $route.params.name }}</h1>
@@ -157,20 +158,20 @@
       <p>Still, the card’s high rewards rates will more than make up for the fee for many cardholders, especially those with families. The decision becomes a break-even analysis: Will you spend enough on the card, especially on transit and supermarkets, to quickly cover its cost and start earning a profit?</p>
       <p>The annual fee on the Blue Cash Preferred® Card from American Express sets a high bar for its rewards. You can clear it fairly easily if you regularly spend a lot at the supermarket, the gas pump, or on commuting. And if you earn the card's bonus offer for new cardholders, your first year-plus with the card will cost you nothing.</p>
     </section>
-    <footer>
-      <div class="top">
-        <h5>Política de Privacidade</h5>
-        <h5>Termos de Serviço</h5>
-      </div>
-      <p>Plusdin©  2019 - Todos os Direitos Reservados</p>
-    </footer>
   </div>
+  <Footer />
 </template>
 
 <script>
+import Header from './../components/Header.vue'
+import Footer from './../components/Footer.vue'
 
 export default {
-  name: 'Product'
+  name: 'Product',
+  components: {
+    Header,
+    Footer
+  },
 }
 </script>
 
@@ -334,6 +335,7 @@ footer p {
   max-width: 1200px;
   margin: 0px auto;
   overflow-y: auto;
+  padding-top: 80px;
 }
 
 .container::-webkit-scrollbar {

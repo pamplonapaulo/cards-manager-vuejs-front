@@ -23,6 +23,7 @@ header {
   height: 80px;
   width: 100%;
   background: #fff;
+  box-shadow: 5px 2px 5px rgba(0,0,0,0.1);
   z-index: 9;
 }
 .contained {
